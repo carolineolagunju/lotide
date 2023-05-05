@@ -15,28 +15,33 @@ const assertArraysEqual = function(arr1, arr2){
   }
 }
 
-/*const assertArraysEqual = function(eqArrays){
-  if(eqArrays !== true) {
-    return "Failed comparison."
-  }
-  return "Passed comparison";
-}*/
 
-assertArraysEqual([1,2,3], [2,2,4]);
-assertArraysEqual([1,2,3], [1,2,3]);
 
 const middle = function(arr) {
-  let returnArr = [];
-  for(let i = 0; i < arr.length; i++) {
-    if(arr.length % 2 === 0) {
-      
-
-    }
-
+  if(arr.length < 3) {
+    return [];
   }
 
-//check if the length of args is odd
+    if (arr.length % 2 === 0) {
+      let result = [];
+      const num = arr.length/2
+      result.push(arr[num -1])
+      result.push(arr[num])
+      return result;
+    }
 
-//check if the length of args is between 0 and 2, and return empty array
-return returnArr;
+      if (arr.length % 2 !== 0) {
+        let result = [];
+        const num = arr.length/2
+        const roundedNum = Math.ceil(num)
+        result.push(arr[roundedNum -1])
+        return result;
+      }
 }
+
+
+
+
+assertArraysEqual(middle([1,2,3]), [2]);
+assertArraysEqual(middle([1,2,3,4]), [2,3]);
+assertArraysEqual(middle([1,2,3,4,5]), [3]);
