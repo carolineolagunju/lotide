@@ -23,7 +23,7 @@ const tail = function(arr) {
 };
 
 console.log(tail([1,2,3,4]));
-console.log(tail(testArr))
+console.log(tail(testArr));
 
 
 assertEqual(testArr.length, 3);

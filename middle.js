@@ -4,40 +4,40 @@ const eqArrays = function(arr1, arr2) {
       return false;
     }
   }
-  return true
-}
+  return true;
+};
 
-const assertArraysEqual = function(arr1, arr2){
-  if (eqArrays(arr1, arr2)){
+const assertArraysEqual = function(arr1, arr2) {
+  if (eqArrays(arr1, arr2)) {
     console.log("Passed comparison.");
   } else {
     console.log("Failed comparison.");
   }
-}
+};
 
 
 
 const middle = function(arr) {
-  if(arr.length < 3) {
+  if (arr.length < 3) {
     return [];
   }
 
-    if (arr.length % 2 === 0) {
-      let result = [];
-      const num = arr.length/2
-      result.push(arr[num -1])
-      result.push(arr[num])
-      return result;
-    }
+  if (arr.length % 2 === 0) {
+    let result = [];
+    const num = arr.length / 2;
+    result.push(arr[num - 1]);
+    result.push(arr[num]);
+    return result;
+  }
 
-      if (arr.length % 2 !== 0) {
-        let result = [];
-        const num = arr.length/2
-        const roundedNum = Math.ceil(num)
-        result.push(arr[roundedNum -1])
-        return result;
-      }
-}
+  if (arr.length % 2 !== 0) {
+    let result = [];
+    const num = arr.length / 2;
+    const roundedNum = Math.ceil(num);
+    result.push(arr[roundedNum - 1]);
+    return result;
+  }
+};
 
 
 

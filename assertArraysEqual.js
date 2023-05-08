@@ -4,17 +4,17 @@ const eqArrays = function(arr1, arr2) {
       return false;
     }
   }
-  return true
-}
+  return true;
+};
 
 
-const assertArraysEqual = function(arr1, arr2){
-  if (eqArrays(arr1, arr2)){
+const assertArraysEqual = function(arr1, arr2) {
+  if (eqArrays(arr1, arr2)) {
     console.log("Passed comparison.");
   } else {
     console.log("Failed comparison.");
   }
-}
+};
 /*const assertArraysEqual = function(eqArrays){
   if(eqArrays !== true) {
     return "Failed comparison."

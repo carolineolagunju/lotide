@@ -4,34 +4,34 @@ const eqArrays = function(arr1, arr2) {
       return false;
     }
   }
-  return true
-}
+  return true;
+};
 
 
-const assertArraysEqual = function(arr1, arr2){
-  if (eqArrays(arr1, arr2)){
+const assertArraysEqual = function(arr1, arr2) {
+  if (eqArrays(arr1, arr2)) {
     console.log("Passed comparison.");
   } else {
     console.log("Failed comparison.");
   }
-}
+};
 
 
 
 const without = function(arrA, arrB) {
   let diffArr = [];
   for (let i = 0; i < arrA.length; i++) {
-    if(arrB.indexOf(arrA[i]) === -1) {
+    if (arrB.indexOf(arrA[i]) === -1) {
       diffArr.push(arrA[i]);
     }
   }
   return diffArr;
-}
+};
 
 
 const words = ["hello", "world", "lighthouse"];
 
-assertArraysEqual(words, ["lighthouse"]); 
+assertArraysEqual(words, ["lighthouse"]);
 
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
