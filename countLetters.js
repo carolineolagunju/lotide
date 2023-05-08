@@ -16,11 +16,11 @@ const countLetters = function(string) {
       continue;
     }
 
-    if(!result[letter]) {
-      result[letter] = 0
+    if (!result[letter]) {
+      result[letter] = 0;
     }
 
-    result[letter]++
+    result[letter]++;
 
   }
 

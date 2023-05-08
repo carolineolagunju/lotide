@@ -25,12 +25,12 @@ const letterPositions = function(sentence) {
       continue;
     }
   
-    if(!results[letter]) {
+    if (!results[letter]) {
       results[letter] = [];
       
+    }
+    results[letter].push(char);
   }
-  results[letter].push(char)git 
-}
   return results;
 
   // logic to update results here
