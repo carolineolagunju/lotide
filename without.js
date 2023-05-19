@@ -10,9 +10,9 @@ const eqArrays = function(arr1, arr2) {
 
 const assertArraysEqual = function(arr1, arr2) {
   if (eqArrays(arr1, arr2)) {
-    console.log("Passed comparison.");
+    console.log("😊😊😊 Passed comparison.");
   } else {
-    console.log("Failed comparison.");
+    console.log("😡😡😡 Failed comparison.");
   }
 };
 
@@ -31,8 +31,11 @@ const without = function(arrA, arrB) {
 
 const words = ["hello", "world", "lighthouse"];
 
-assertArraysEqual(words, ["lighthouse"]);
+assertArraysEqual(words, ["lighthouse"]); //["hello", 'world"] should fail
 
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+assertArraysEqual(words, ["hello", "world", "lighthouse"]); //pass
 
-assertArraysEqual(without([1,2,3], [2,3]), [1]);
+assertArraysEqual(without([1,2,3], [2,3]), [1]); // pass
+
+
+
