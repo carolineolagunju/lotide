@@ -32,7 +32,7 @@ const middle = function(arr) {
 
   if (arr.length % 2 === 0) {
     const halfLength = arr.length / 2;
-    result.push(arr[halfLength - 1])
+    result.push(arr[halfLength - 1]);
     result.push(arr[halfLength]);
     return result;
   }
