@@ -1,4 +1,7 @@
 const eqArrays = function(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
   for (let i = 0; i < arr1.length; i++) {
     if (arr1[i] !== arr2[i]) {
       return false;
@@ -10,31 +13,34 @@ const eqArrays = function(arr1, arr2) {
 
 const assertArraysEqual = function(arr1, arr2) {
   if (eqArrays(arr1, arr2)) {
-    console.log("Passed comparison.");
+    console.log("😊😊😊 Passed comparison.");
   } else {
-    console.log("Failed comparison.");
+    console.log("😡😡😡 Failed comparison.");
   }
 };
 
 
-const letterPositions = function(sentence) {
+
+
+const letterPositions = sentence => {
   const results = {};
-  for (const char in sentence) {
-    const letter = sentence[char];
-    if (letter === " ") {
+  for (let i = 0; i < sentence.length; i++) {
+    if (sentence[i] === " ") {
       continue;
     }
-  
-    if (!results[letter]) {
-      results[letter] = [];
-      
+    if (!results[sentence[i]]) {
+      results[sentence[i]] = [];
     }
-    results[letter].push(char);
+    results[sentence[i]].push(i);
   }
   return results;
-
-  // logic to update results here
 };
 
-assertArraysEqual(letterPositions("hello").e, "1");
-//assertArraysEqual(letterPositions("lighthouse in the house").g, "2");
+
+
+const sentence = letterPositions("i am a web developer");
+assertArraysEqual(sentence["a"], [2,5]); //pass
+assertArraysEqual(sentence["a"], 2,5); // fail because they are not the same data type
+
+
+assertArraysEqual(letterPositions("hello").e, "1"); //failed because array is not a string
