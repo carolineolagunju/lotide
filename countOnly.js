@@ -14,9 +14,9 @@ const countOnly = (allItems, itemsToCount) => {
   for (const item of allItems) {
     if (itemsToCount[item]) {
       if (results[item]) {
-        results[item] += 1;
+        results[item] += 1;    //if it sees that the item already exist in the object result, it will increase the number by 1
       } else {
-        results[item] = 1;
+        results[item] = 1;      //this will initially set the value of the key to 1
       }
     }
   }
