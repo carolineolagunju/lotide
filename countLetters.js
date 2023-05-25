@@ -29,3 +29,4 @@ const letters = countLetters("I am a student of lighthouse labs");
 assertEqual(letters["s"], 3);  //pass
 assertEqual(letters["o"], 3);  //fail
 
+
