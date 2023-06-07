@@ -25,7 +25,7 @@ const assertArraysEqual = function(arr1, arr2) {
 
 const takeUntil = function(array, callback) {
   const results = [];
-  for (let item of array) {
+  for (const item of array) {
     if (callback(item)) {
       return results;
     }
@@ -41,5 +41,8 @@ const result1 = takeUntil(peoples, people => people === "esther");
 const data1 = [1, 2, 5, 7, 2, -1, 8, 4, 5];
 const result2 = takeUntil(data1, data => data > 7);
 
-assertArraysEqual(result1, ["carol", "success", "james"]);//pass
-assertArraysEqual([1, 2, 5, 7, 2, 0], result2);//fail because the last element in the array is not the same value
+//pass
+assertArraysEqual(result1, ["carol", "success", "james"]);
+
+//fail because the last element in the array is not the same value
+assertArraysEqual([1, 2, 5, 7, 2, 0], result2);

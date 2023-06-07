@@ -26,7 +26,9 @@ const countLetters = letters => {
 
 
 const letters = countLetters("I am a student of lighthouse labs");
-assertEqual(letters["s"], 3);  //pass
-assertEqual(letters["o"], 3);  //fail
 
+//pass
+assertEqual(letters["s"], 3);
 
+//fail
+assertEqual(letters["o"], 3);

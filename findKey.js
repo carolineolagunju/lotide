@@ -31,6 +31,12 @@ const result1 = findKey(objs, x => x.stars === 2);
 const result2 = findKey(objs, x => x.stars === 5);
 const result3 = findKey(objs, x => x.stars === 2);
 
-assertEqual(result1, "noma");//pass
-assertEqual(result2, undefined);//pass
-assertEqual(result3, "Ora");//failed because Ora is not te first key that is === 2
+
+//pass
+assertEqual(result1, "noma");
+
+//pass
+assertEqual(result2, undefined);
+
+//failed because Ora is not te first key that is === 2
+assertEqual(result3, "Ora");

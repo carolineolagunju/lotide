@@ -22,10 +22,10 @@ const assertArraysEqual = function(arr1, arr2) {
 
 const flatten = function(arr) {
   let output = [];
-  for (let item of arr) {
+  for (const item of arr) {
     
     if (Array.isArray(item)) {
-      for (let element of item) {
+      for (const element of item) {
         output.push(element);
       }
     } else {
@@ -37,8 +37,11 @@ const flatten = function(arr) {
 
 
 
-assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1,2,3,4,5,6]); // should pass
+//should pass
+assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1,2,3,4,5,6]);
 
-assertArraysEqual(flatten([1, [2,4], 3]), [1,2,4,3]); //pass
+//pass
+assertArraysEqual(flatten([1, [2,4], 3]), [1,2,4,3]);
 
-assertArraysEqual(flatten([1, [2,4], 3]), [1,4,4,3]); //fail
+//fail
+assertArraysEqual(flatten([1, [2,4], 3]), [1,4,4,3]);

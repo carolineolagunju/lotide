@@ -39,8 +39,12 @@ const letterPositions = sentence => {
 
 
 const sentence = letterPositions("i am a web developer");
-assertArraysEqual(sentence["a"], [2,5]); //pass
-assertArraysEqual(sentence["a"], 2,5); // fail because they are not the same data type
 
+//pass
+assertArraysEqual(sentence["a"], [2,5]);
 
-assertArraysEqual(letterPositions("hello").e, "1"); //failed because array is not a string
+//fail because they are not the same data type
+assertArraysEqual(sentence["a"], 2,5);
+
+//failed because array is not a string
+assertArraysEqual(letterPositions("hello").e, "1");

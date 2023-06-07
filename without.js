@@ -34,11 +34,11 @@ const without = function(arrA, arrB) {
 
 const words = ["hello", "world", "lighthouse"];
 
-assertArraysEqual(words, ["lighthouse"]); //["hello", 'world"] should fail
+//["hello", 'world"] should fail
+assertArraysEqual(words, ["lighthouse"]);
 
-assertArraysEqual(words, ["hello", "world", "lighthouse"]); //pass
+//pass
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
-assertArraysEqual(without([1,2,3], [2,3]), [1]); // pass
-
-
-
+//pass
+assertArraysEqual(without([1,2,3], [2,3]), [1]);

@@ -26,9 +26,9 @@ const assertEqual = function(actual, expected) {
 
 const eqObjects = (object1, object2) => {
 
-  let object1Key = Object.keys(object1);
+  const object1Key = Object.keys(object1);
 
-  let object2Key = Object.keys(object2);
+  const object2Key = Object.keys(object2);
 
   let returnedValue = false;
 
@@ -38,7 +38,6 @@ const eqObjects = (object1, object2) => {
   }
 
   for (const key of object1Key) {
-    //checking if key value is an array
     if (object1[key].isArray === object2[key].isArray) {
       returnedValue = eqArrays(object1[key], object2[key]);
     } else if (object1[key] === object2[key]) {
@@ -65,7 +64,11 @@ const myShirt = {colours: ["white", "green"], size: 2};
 
 
 
-assertEqual(eqObjects(car, carolineCar), true);//pass
-assertEqual(eqObjects(olagunju, caroline), true);//fail because the length is not equal
-assertEqual(eqObjects(shirt, myShirt), true);
+//pass
+assertEqual(eqObjects(car, carolineCar), true);
 
+//fail because the length is not equal
+assertEqual(eqObjects(olagunju, caroline), true);
+
+//pass
+assertEqual(eqObjects(shirt, myShirt), true);
