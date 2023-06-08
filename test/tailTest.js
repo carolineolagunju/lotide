@@ -1,24 +1,22 @@
-const assertEqual = require('../assertEqual');
+const assert = require("chai").assert
 const tail = require('../tail');
 
-const emptyArr = tail([]);
-const words = tail(["Lighthouse"]);
-const names = tail(["Caroline", "James"]);
-const someNumbers = tail(["2", "10", "5"]);
-const places = tail(["Canada", "USA", "Mexico", "Nigeria" ]);
 
+describe("#tail", () => {
+  it("returns ['2','3'] for ['1','2','3']", () => {
+    assert.deepEqual(tail(['1','2','3']), ['2','3'])
+  });
 
- //should pass because the length of emptyArr is 0
-assertEqual(emptyArr.length, 0);
+  it("returns [] for []", () => {
+    assert.deepEqual(tail([]), [])
+  });
 
- //fail, length of words is now 0
-assertEqual(words.length, 1);
+  it("returns [] for ['Lighthouse']", () => {
+    assert.deepEqual(tail(['Lighthouse']), [])
+  });
 
- //pass, because the length of names is now 1
-assertEqual(names.length, 1);
-
-//should pass because length is 2
-assertEqual(someNumbers.length, 2);
-
- //should fail because number is !== string
-assertEqual(places.length, "Light");
+  it("returns ['USA', 'Mexico', 'Nigeria'] for ['Canada', 'USA', 'Mexico', 'Nigeria']", () => {
+    assert.deepEqual(tail(['Canada', 'USA', 'Mexico', 'Nigeria']), ['USA', 'Mexico', 'Nigeria'])
+  });
+  
+});
