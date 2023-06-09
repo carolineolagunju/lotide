@@ -1,6 +1,3 @@
-const assertEqual = require('./assertEqual');
-
-
 const findKey = (objs, callback) => {
   for (const element in objs) {
     if (callback(objs[element]) === true) {
@@ -10,7 +7,7 @@ const findKey = (objs, callback) => {
   return undefined;
 };
 
-
+/*
 //Test Data
 const objs = {
   "Blue Hill": { stars: 1 },
@@ -34,6 +31,6 @@ assertEqual(result2, undefined);
 
 //failed because Ora is not te first key that is === 2
 assertEqual(result3, "Ora");
-
+*/
 
 module.exports = findKey;

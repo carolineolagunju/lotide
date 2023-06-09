@@ -1,5 +1,3 @@
-const assertArraysEqual = require('./assertArraysEqual');
-
 const takeUntil = function(array, callback) {
   const results = [];
   for (const item of array) {
@@ -13,17 +11,17 @@ const takeUntil = function(array, callback) {
 
 
 
-//Test Data
-const peoples = ["carol", "success", "james", "esther"];
-const result1 = takeUntil(peoples, people => people === "esther");
+// //Test Data
+// const peoples = ["carol", "success", "james", "esther"];
+// const result1 = takeUntil(peoples, people => people === "esther");
 
-const data1 = [1, 2, 5, 7, 2, -1, 8, 4, 5];
-const result2 = takeUntil(data1, data => data > 7);
+// const data1 = [1, 2, 5, 7, 2, -1, 8, 4, 5];
+// const result2 = takeUntil(data1, data => data > 7);
 
-//pass
-assertArraysEqual(result1, ["carol", "success", "james"]);
+// //pass
+// assertArraysEqual(result1, ["carol", "success", "james"]);
 
-//fail because the last element in the array is not the same value
-assertArraysEqual([1, 2, 5, 7, 2, 0], result2);
+// //fail because the last element in the array is not the same value
+// assertArraysEqual([1, 2, 5, 7, 2, 0], result2);
 
 module.exports = takeUntil;

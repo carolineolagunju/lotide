@@ -1,8 +1,8 @@
 {
   "name": "@carolineolagunju/lotide",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A school project on implementing functions that focuses on Objects, Conditionals, Arrays and Loops",
-  "main": "assertArraysEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
