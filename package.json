@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@carolineolagunju/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A school project on implementing functions that focuses on Objects, Conditionals, Arrays and Loops",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/carolineolagunju/lotide.git"
   },
-  "author": "",
+  "author": "Caroline Olagunju",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/carolineolagunju/lotide/issues"

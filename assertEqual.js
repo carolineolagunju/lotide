@@ -7,3 +7,19 @@ const assertEqual = function(actual, expected) {
 };
 
 module.exports = assertEqual;
+
+
+// //Test Data
+// //pass
+// assertEqual("Lighthouse Labs", "Lighthouse Labs");
+
+// //fail
+// assertEqual("Lighthouse Labs", "Bootcamp");
+
+// //pass
+// assertEqual(1, 1);
+
+// //fail
+// assertEqual(1, 10);
+
+module.exports = assertEqual;

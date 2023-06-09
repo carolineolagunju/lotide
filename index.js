@@ -2,14 +2,20 @@ const head = require('./head');
 const tail = require('./tail');
 const middle = require('./middle');
 const eqArrays = require('./eqArrays');
-const assertEqual = require('./assertEqual');
-const assertArraysEqual = require('./assertArraysEqual');
+const countOnly = require('./countOnly');
+const letterPositions = require('./letterPositions');
+const findKeyByValue = require('./findKeyByValue');
+const eqObjects = require('./eqObjects');
+const countLetters = require('./countLetters');
 
 module.exports = {
-  head: head,
-  tail: tail,
-  middle: middle,
-  eqArrays: eqArrays,
-  assertEqual: assertEqual,
-  assertArraysEqual: assertArraysEqual
+  head,
+  tail,
+  middle,
+  eqArrays,
+  countOnly,
+  letterPositions,
+  findKeyByValue,
+  eqObjects,
+  countLetters
 };
